@@ -1,0 +1,14 @@
+# Business documents (keep private)
+LEADS_TRACKER.md
+email-template.txt
+*.md
+!README.md
+
+# Personal/sensitive files
+*.txt
+!LICENSE.txt
+
+# Local backup files
+backup/
+temp/
+
