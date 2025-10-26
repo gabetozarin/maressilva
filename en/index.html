@@ -94,11 +94,16 @@
         }
 
         // Dynamic sun glare effect
+        let rafId = null;
         document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth) * 100;
-            const y = (e.clientY / window.innerHeight) * 100;
-            document.body.style.setProperty('--sun-x', `${x}%`);
-            document.body.style.setProperty('--sun-y', `${y}%`);
+            if (rafId) return;
+            rafId = requestAnimationFrame(() => {
+                const x = (e.clientX / window.innerWidth) * 100;
+                const y = (e.clientY / window.innerHeight) * 100;
+                document.body.style.setProperty('--sun-x', `${x}%`);
+                document.body.style.setProperty('--sun-y', `${y}%`);
+                rafId = null;
+            });
         });
     </script>
 </body>
