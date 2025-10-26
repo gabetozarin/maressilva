@@ -1,33 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Maressilva Tech | Marketing Digital e Presença Web | Madeira</title>
-    <meta name="description" content="Maressilva Tech - Agência de marketing digital especializada em bem-estar, saúde e presença digital. Baseada na Madeira desde 2025. Contacte-nos para a sua transformação digital.">
-    <meta name="keywords" content="maressilva, marketing digital, design web, madeira, portugal, agência digital, presença web, branding, marketing saúde">
-    <meta name="author" content="Maressilva Tech">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://maressilva.eu/">
-    <meta property="og:title" content="Maressilva Tech | Marketing Digital e Presença Web">
-    <meta property="og:description" content="Agência de marketing digital especializada em bem-estar, saúde e presença digital. Madeira, desde 2025.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://maressilva.eu/">
-    <meta property="twitter:title" content="Maressilva Tech | Marketing Digital e Presença Web">
-    <meta property="twitter:description" content="Agência de marketing digital especializada em bem-estar, saúde e presença digital. Madeira, desde 2025.">
-    
-    <!-- Language Alternates -->
-    <link rel="alternate" hreflang="en" href="https://maressilva.eu/en/" />
-    <link rel="alternate" hreflang="pt" href="https://maressilva.eu/" />
-    <link rel="alternate" hreflang="x-default" href="https://maressilva.eu/" />
-    
+    <title>Maressilva Tech</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon-final.svg">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
@@ -36,47 +12,32 @@
 <body>
     <main>
         <nav class="lang-switch">
-            <a href="#" class="active">pt</a> | <a href="en/">en</a>
+            <a href="index-pt.html">pt</a> | <a href="#" class="active">en</a>
         </nav>
 
         <div class="hero">
-            <h1>maressilva tech.<br><span>marketing digital</span></h1>
-            <p class="description">bem-estar, saúde e presença digital — madeira, desde 2025</p>
+            <h1>maressilva tech.<br><span>digital marketing</span></h1>
+            <p class="description">we build presence for brands that care. madeira, 2025.</p>
         </div>
 
         <div class="contact">
             <p>T. <a href="tel:+351927809033">927 809 033</a> | <a href="tel:+351927809034">927 809 034</a></p>
-            <p>E. <a href="mailto:hello@maressilva.eu">hello@maressilva.eu</a></p>
+                        <p>E. <a href="mailto:hello@maressilva.eu">hello@maressilva.eu</a></p>
         </div>
     </main>
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Maressilva Tech",
-      "url": "https://maressilva.eu",
-      "logo": "https://maressilva.eu/assets/favicon-final.svg",
-      "description": "Agência de marketing digital especializada em bem-estar, saúde e presença digital. Baseada na Madeira desde 2025.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Madeira",
-        "addressCountry": "PT"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+351927809033",
-        "contactType": "Atendimento ao Cliente",
-        "email": "hello@maressilva.eu",
-        "areaServed": "PT",
-        "availableLanguage": ["en", "pt"]
-      },
-      "sameAs": [],
-      "alternateName": "maressilva tech",
-      "slogan": "bem-estar, saúde e presença digital — madeira, desde 2025"
-    }
+    <script>
+        // Smooth cursor-following gradient effect
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) * 100;
+            const y = (e.clientY / window.innerHeight) * 100;
+            document.body.style.setProperty('--gradient-x', `${x}%`);
+            document.body.style.setProperty('--gradient-y', `${y}%`);
+        });
     </script>
+</body>
+</html>
+        </div>
+    </main>
     
     <script>
         // Initialize GSAP timeline

@@ -79,6 +79,14 @@
     </script>
     
     <script>
+        // Smooth cursor-following gradient effect
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) * 100;
+            const y = (e.clientY / window.innerHeight) * 100;
+            document.body.style.setProperty('--gradient-x', `${x}%`);
+            document.body.style.setProperty('--gradient-y', `${y}%`);
+        });
+
         // Initialize GSAP timeline
         gsap.registerPlugin();
 
