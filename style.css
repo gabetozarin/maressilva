@@ -6,19 +6,38 @@
 
 body {
     font-family: 'Space Grotesk', sans-serif;
-    background: 
-        radial-gradient(circle at var(--gradient-x, 50%) var(--gradient-y, 50%), 
-            rgba(255, 245, 215, 0.25) 0%, 
-            rgba(255, 245, 215, 0.15) 15%, 
-            rgba(255, 240, 200, 0.08) 25%, 
-            rgba(255, 235, 180, 0.04) 35%, 
-            rgba(0, 0, 0, 0) 50%),
-        radial-gradient(circle at var(--gradient-x, 50%) var(--gradient-y, 50%), 
-            rgba(255, 250, 230, 0.12) 0%, 
+    /* Multi-layer lens-glare trail (t0 is head, t7 is oldest visible) */
+    background:
+        radial-gradient(circle at var(--t0x, 50%) var(--t0y, 50%),
+            rgba(255, 245, 215, 0.24) 0%,
+            rgba(255, 245, 215, 0.14) 14%,
+            rgba(255, 240, 200, 0.07) 28%,
             rgba(0, 0, 0, 0) 40%),
-        radial-gradient(ellipse 120% 80% at var(--gradient-x, 50%) var(--gradient-y, 50%), 
-            rgba(255, 248, 220, 0.06) 0%, 
-            rgba(0, 0, 0, 0) 55%),
+        radial-gradient(circle at var(--t1x, 50%) var(--t1y, 50%),
+            rgba(255, 245, 215, 0.16) 0%,
+            rgba(0, 0, 0, 0) 42%),
+        radial-gradient(circle at var(--t2x, 50%) var(--t2y, 50%),
+            rgba(255, 245, 215, 0.13) 0%,
+            rgba(0, 0, 0, 0) 44%),
+        radial-gradient(circle at var(--t3x, 50%) var(--t3y, 50%),
+            rgba(255, 245, 215, 0.10) 0%,
+            rgba(0, 0, 0, 0) 46%),
+        radial-gradient(circle at var(--t4x, 50%) var(--t4y, 50%),
+            rgba(255, 245, 215, 0.08) 0%,
+            rgba(0, 0, 0, 0) 48%),
+        radial-gradient(circle at var(--t5x, 50%) var(--t5y, 50%),
+            rgba(255, 245, 215, 0.06) 0%,
+            rgba(0, 0, 0, 0) 50%),
+        radial-gradient(circle at var(--t6x, 50%) var(--t6y, 50%),
+            rgba(255, 245, 215, 0.045) 0%,
+            rgba(0, 0, 0, 0) 52%),
+        radial-gradient(circle at var(--t7x, 50%) var(--t7y, 50%),
+            rgba(255, 245, 215, 0.035) 0%,
+            rgba(0, 0, 0, 0) 54%),
+        /* gentle elliptical bloom on the head for lens character */
+        radial-gradient(ellipse 120% 80% at var(--t0x, 50%) var(--t0y, 50%),
+            rgba(255, 248, 220, 0.05) 0%,
+            rgba(0, 0, 0, 0) 60%),
         #000;
     color: #fff;
     line-height: 1.6;

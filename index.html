@@ -26,29 +26,46 @@
         </div>
     </main>
     <script>
-        // Smooth, delayed cursor-following gradient with realistic physics
-        let currentX = 50;
-        let currentY = 50;
-        let targetX = 50;
-        let targetY = 50;
-        
+        // Long, smooth lens-glare trail with slow, satisfying physics
+        const TRAIL_LENGTH = 18; // increase for a longer tail
+        let headX = 50, headY = 50;
+        let targetX = 50, targetY = 50;
+        const trail = Array.from({ length: TRAIL_LENGTH }, () => ({ x: 50, y: 50 }));
+
+        function setTrailVars() {
+            for (let i = 0; i < Math.min(TRAIL_LENGTH, 8); i++) {
+                const p = trail[i];
+                document.body.style.setProperty(`--t${i}x`, `${p.x}%`);
+                document.body.style.setProperty(`--t${i}y`, `${p.y}%`);
+            }
+        }
+
         document.addEventListener('mousemove', (e) => {
             targetX = (e.clientX / window.innerWidth) * 100;
             targetY = (e.clientY / window.innerHeight) * 100;
         });
-        
+
+        window.addEventListener('touchmove', (e) => {
+            const t = e.touches && e.touches[0];
+            if (!t) return;
+            targetX = (t.clientX / window.innerWidth) * 100;
+            targetY = (t.clientY / window.innerHeight) * 100;
+        }, { passive: true });
+
         function animate() {
-            // Smooth interpolation (lerp) with slow easing - creates satisfying lag
-            const ease = 0.05; // Lower = slower, more dreamy movement
-            currentX += (targetX - currentX) * ease;
-            currentY += (targetY - currentY) * ease;
-            
-            document.body.style.setProperty('--gradient-x', `${currentX}%`);
-            document.body.style.setProperty('--gradient-y', `${currentY}%`);
-            
+            const ease = 0.03; // slower = longer, more cinematic trail
+            headX += (targetX - headX) * ease;
+            headY += (targetY - headY) * ease;
+
+            // add the new head to the front and trim
+            trail.unshift({ x: headX, y: headY });
+            if (trail.length > TRAIL_LENGTH) trail.pop();
+
+            setTrailVars();
             requestAnimationFrame(animate);
         }
-        
+
+        setTrailVars();
         animate();
     </script>
 </body>
