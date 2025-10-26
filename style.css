@@ -6,50 +6,31 @@
 
 body {
     font-family: 'Space Grotesk', sans-serif;
-    /* Multi-layer lens-glare trail (t0 is head, t7 is oldest visible) */
-    background:
-        radial-gradient(circle at var(--t0x, 50%) var(--t0y, 50%),
-            rgba(255, 245, 215, 0.12) 0%,
-            rgba(255, 245, 215, 0.06) 14%,
-            rgba(255, 240, 200, 0.03) 28%,
-            rgba(0, 0, 0, 0) 40%),
-        radial-gradient(circle at var(--t1x, 50%) var(--t1y, 50%),
-            rgba(255, 245, 215, 0.08) 0%,
-            rgba(0, 0, 0, 0) 42%),
-        radial-gradient(circle at var(--t2x, 50%) var(--t2y, 50%),
-            rgba(255, 245, 215, 0.06) 0%,
-            rgba(0, 0, 0, 0) 44%),
-        radial-gradient(circle at var(--t3x, 50%) var(--t3y, 50%),
-            rgba(255, 245, 215, 0.045) 0%,
-            rgba(0, 0, 0, 0) 46%),
-        radial-gradient(circle at var(--t4x, 50%) var(--t4y, 50%),
-            rgba(255, 245, 215, 0.035) 0%,
-            rgba(0, 0, 0, 0) 48%),
-        radial-gradient(circle at var(--t5x, 50%) var(--t5y, 50%),
-            rgba(255, 245, 215, 0.025) 0%,
-            rgba(0, 0, 0, 0) 50%),
-        radial-gradient(circle at var(--t6x, 50%) var(--t6y, 50%),
-            rgba(255, 245, 215, 0.02) 0%,
-            rgba(0, 0, 0, 0) 52%),
-        radial-gradient(circle at var(--t7x, 50%) var(--t7y, 50%),
-            rgba(255, 245, 215, 0.015) 0%,
-            rgba(0, 0, 0, 0) 54%),
-        /* gentle elliptical bloom on the head for lens character */
-        radial-gradient(ellipse 120% 80% at var(--t0x, 50%) var(--t0y, 50%),
-            rgba(255, 248, 220, 0.02) 0%,
-            rgba(0, 0, 0, 0) 60%),
-        #000;
+    background: #000;
     color: #fff;
     line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+}
+
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
 }
 
 main {
+    position: relative;
+    z-index: 2;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 4rem 2rem;
-    overflow: hidden;
 }
 
 .lang-switch {
