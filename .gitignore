@@ -1,14 +1,17 @@
-# Business documents (keep private)
+# Keep these files local (don't push to GitHub)
 LEADS_TRACKER.md
 email-template.txt
+notes.md
+todo.md
 *.md
 !README.md
 
-# Personal/sensitive files
+# Text files (private)
 *.txt
 !LICENSE.txt
 
-# Local backup files
+# Local files
 backup/
 temp/
+local/
 
