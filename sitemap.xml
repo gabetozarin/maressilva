@@ -3,18 +3,20 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://maressilva.eu/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://maressilva.eu/en/" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://maressilva.eu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maressilva.eu/" />
   </url>
   <url>
     <loc>https://maressilva.eu/en/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://maressilva.eu/en/" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://maressilva.eu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maressilva.eu/" />
   </url>
 </urlset>
