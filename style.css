@@ -54,6 +54,12 @@ main {
     will-change: transform, opacity;
 }
 
+.local-seo {
+    font-size: 0.95rem;
+    opacity: 0.6;
+    margin-top: 0.25rem;
+}
+
 .hero {
     margin-top: 4rem;
 }
