@@ -6,9 +6,12 @@
 
 body {
     font-family: 'Space Grotesk', sans-serif;
-    background: radial-gradient(circle at 0% 0%, rgba(255,245,215,0.13) 0%, rgba(0,0,0,0) 35%), #000;
+    --sun-x: 0%;
+    --sun-y: 0%;
+    background: radial-gradient(circle at var(--sun-x) var(--sun-y), rgba(255,245,215,0.13) 0%, rgba(0,0,0,0) 35%), #000;
     color: #fff;
     line-height: 1.6;
+    transition: background 0.3s ease;
 }
 
 main {
