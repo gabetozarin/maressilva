@@ -4,8 +4,8 @@
   <rect width="32" height="32" rx="6" fill="#1a0f08"/>
   
   <!-- Simple parallel wave lines, rotated 90 degrees and shifted left -->
-  <g transform="rotate(270, 15, 16)">
-    <path d="M7 12C15 12 15 20 23 20M7 16C15 16 15 24 23 24" 
+  <g transform="rotate(270, 14, 16)">
+    <path d="M6 12C14 12 14 20 22 20M6 16C14 16 14 24 22 24" 
           stroke="#f4e8d8" 
           stroke-width="2" 
           stroke-linecap="round"
