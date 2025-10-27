@@ -99,10 +99,10 @@ a:hover {
 }
 
 .footer {
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
     text-align: center;
     font-size: 0.9rem;
-    margin-top: 6rem;
+    margin-top: 8rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0;
     transform: translateY(20px);
