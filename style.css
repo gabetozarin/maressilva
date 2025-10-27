@@ -80,6 +80,7 @@ h1 span {
 
 .contact {
     margin-top: auto;
+    padding-bottom: 3rem;
     will-change: transform, opacity;
 }
 
