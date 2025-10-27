@@ -51,13 +51,8 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-help">
-            <p>precisa de ajuda? <a href="mailto:support@maressilva.eu">support@maressilva.eu</a></p>
-        </div>
-        <div class="footer-legal">
-            <p>© 2025 maressilva tech. — todos os direitos reservados</p>
-        </div>
+    <footer class="footer">
+        <p>precisa de ajuda? <a href="mailto:support@maressilva.eu">support@maressilva.eu</a> · © 2025 maressilva tech.</p>
     </footer>
     
         <!-- Schema.org Structured Data (PT) -->
@@ -108,6 +103,15 @@
         .from("h1", { opacity: 0, y: 30, duration: 1 }, "-=0.5")
         .from(".description", { opacity: 0, y: 20, duration: 0.8 }, "-=0.7")
         .from(".contact", { opacity: 0, y: 20, duration: 0.8 }, "-=0.5");
+
+        // Smooth footer fade-in on scroll
+        let scrolled = false;
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100 && !scrolled) {
+                document.querySelector('.footer').classList.add('visible');
+                scrolled = true;
+            }
+        });
     </script>
 </body>
 </html>

@@ -93,26 +93,37 @@ a:hover {
     opacity: 0.7;
 }
 
-footer {
-    padding: 2rem;
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 4rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
-.footer-help {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.footer-help a {
-    opacity: 1;
-    font-weight: 400;
-}
-
-.footer-legal {
-    font-size: 0.85rem;
+.footer.visible {
     opacity: 0.5;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.footer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
