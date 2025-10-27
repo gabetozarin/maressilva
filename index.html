@@ -103,6 +103,18 @@
         .from("h1", { opacity: 0, y: 30, duration: 1 }, "-=0.5")
         .from(".description", { opacity: 0, y: 20, duration: 0.8 }, "-=0.7")
         .from(".contact", { opacity: 0, y: 20, duration: 0.8 }, "-=0.5");
+
+        // Footer fade-in on scroll
+        const footer = document.querySelector('.footer');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    footer.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        observer.observe(footer);
     </script>
 </body>
 </html>
