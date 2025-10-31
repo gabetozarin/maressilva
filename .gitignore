@@ -1,8 +1,15 @@
-# Keep these files local (don't push to GitHub)
+# Personal automation scripts - NEVER COMMIT
+*.ps1
+*.bat
+*.log
+
+# Business data - NEVER COMMIT  
 LEADS_TRACKER.md
+REMINDERS.md
+REPORTS.md
 email-template.txt
-notes.md
-todo.md
+
+# Keep only website files public
 *.md
 !README.md
 
